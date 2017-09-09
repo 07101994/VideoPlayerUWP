@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="MyVideo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid Margin="10,10,10,46">
+            <MediaElement Tapped="Pause_Button_Click" DragOver="VideoPlayer_DragOver_1" MediaEnded="VideoPlayer_SeekCompleted_1" RightTapped="VideoPlayer_RightTapped_1" MediaOpened="VideoPlayer_MediaOpened" x:Name="VideoPlayer"/>
+
+            <Button x:Name="pick_video_file" HorizontalAlignment="Center" Click="OpenFileButton_Click" Content="Pick Video"/>
+            <Image HorizontalAlignment="Left" Height="100" Margin="625,306,0,0" VerticalAlignment="Top" Width="100"/>
+
+        </Grid>
+        <Grid VerticalAlignment="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="45*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Slider ValueChanged="SeekToMediaPosition" Grid.Column="0" x:Name="DurationSlider" VerticalAlignment="Top"/>
+            <TextBlock x:Name="DurationText" TextWrapping="Wrap" Grid.Column="1" Text="TextBlock" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        </Grid>
+
+
+
+
+
+    </Grid>
+
+</Page>

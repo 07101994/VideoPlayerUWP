@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Identity Name="38806TusharKoshti.MyVideoPlayer" Publisher="CN=BE70A07A-CB3A-494E-86FA-451647E2B4C5" Version="1.1.0.6" />
+  <Properties>
+    <DisplayName>My Video Player</DisplayName>
+    <PublisherDisplayName>Tushar Koshti</PublisherDisplayName>
+    <Logo>5050.jpg</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="MyVideo.App">
+      <Extensions>
+        <Extension Category="windows.fileTypeAssociation" EntryPoint="MainPage">
+          <FileTypeAssociation Name=".mp4">
+            <Logo>620300.jpg</Logo>
+            <SupportedFileTypes>
+              <FileType>.mp4</FileType>
+            </SupportedFileTypes>
+          </FileTypeAssociation>
+        </Extension>
+      </Extensions>
+      <m2:VisualElements DisplayName="My Video Player" Description="My Video Player is a Windows 8 app which can play the user's Video files easily." BackgroundColor="#464646" ForegroundText="light" Square150x150Logo="150150.jpg" Square30x30Logo="3030.jpg">
+        <m2:DefaultTile ShortName="My Video Player" Wide310x150Logo="310150.jpg">
+          <m2:ShowNameOnTiles>
+            <m2:ShowOn Tile="square150x150Logo" />
+            <m2:ShowOn Tile="wide310x150Logo" />
+          </m2:ShowNameOnTiles>
+        </m2:DefaultTile>
+        <m2:SplashScreen BackgroundColor="black" Image="620300.jpg" />
+      </m2:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>
